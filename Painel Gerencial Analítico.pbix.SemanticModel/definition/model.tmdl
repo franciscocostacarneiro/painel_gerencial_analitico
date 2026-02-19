@@ -1,0 +1,27 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Medidas","Base 1 – Internações Hospitalares","Base 2 – Itens da Internação"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Medidas
+ref table 'Base 1 – Internações Hospitalares'
+ref table DateTableTemplate_ba2378e4-066c-4ebe-990e-f9a3e46552e6
+ref table LocalDateTable_e267864b-703f-49c5-b2b5-f0e636cc7365
+ref table LocalDateTable_f1a07f4c-7464-4dc1-8161-3451393c4342
+ref table LocalDateTable_669a2681-1de2-4b3f-bb3a-60d977250c76
+ref table LocalDateTable_ee82c381-2b69-4a88-b6fe-1064731866e0
+ref table LocalDateTable_9efdffa0-71fd-45ef-a59c-d79777399b1f
+ref table 'Base 2 – Itens da Internação'
+ref table LocalDateTable_7869b3ef-aa2b-4709-9deb-d25625ef1d1b
+
+ref cultureInfo pt-BR
+

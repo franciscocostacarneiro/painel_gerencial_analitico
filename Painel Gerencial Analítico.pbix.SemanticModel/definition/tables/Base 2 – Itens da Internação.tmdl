@@ -1,0 +1,162 @@
+table 'Base 2 – Itens da Internação'
+	lineageTag: 4424cd1f-3afd-467b-a161-08310d4d8178
+
+	column item_id
+		dataType: string
+		lineageTag: c2f3dd80-9768-42eb-8d05-421ea9dfa963
+		summarizeBy: none
+		sourceColumn: item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column senha_internacao
+		dataType: string
+		lineageTag: 1e89490f-1690-4845-8293-5cd1983d9c21
+		summarizeBy: none
+		sourceColumn: senha_internacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_item
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5f440855-d3e1-4dcf-88fe-ac1d5f662e49
+		summarizeBy: none
+		sourceColumn: data_item
+
+		variation Variation
+			isDefault
+			relationship: 0c4e308a-12bb-4122-8018-7b9ca20ff7bf
+			defaultHierarchy: LocalDateTable_7869b3ef-aa2b-4709-9deb-d25625ef1d1b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_item
+		dataType: string
+		lineageTag: 5813addb-2ff4-4d33-a735-49fd176af6f5
+		summarizeBy: none
+		sourceColumn: tipo_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column subtipo_item
+		dataType: string
+		lineageTag: b87d6b72-aead-46c8-a7b4-75f9305da334
+		summarizeBy: none
+		sourceColumn: subtipo_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_item
+		dataType: string
+		lineageTag: 65fbc133-f933-436f-bef7-77bf3eb56e53
+		summarizeBy: none
+		sourceColumn: codigo_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_item
+		dataType: string
+		lineageTag: 80081272-0bd2-4f93-ba01-a0af455f7f2e
+		summarizeBy: none
+		sourceColumn: descricao_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantidade_solicitada
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b986c6f-4721-4c67-bb47-73d9d80d640b
+		summarizeBy: sum
+		sourceColumn: quantidade_solicitada
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantidade_autorizada
+		dataType: int64
+		formatString: 0
+		lineageTag: 444a10cc-e985-423a-932c-93facc7bd3eb
+		summarizeBy: sum
+		sourceColumn: quantidade_autorizada
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidade_medida
+		dataType: string
+		lineageTag: cd68b85d-5b7f-4e27-a140-1b23892b1b39
+		summarizeBy: none
+		sourceColumn: unidade_medida
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_unitario
+		dataType: int64
+		formatString: 0
+		lineageTag: 290e7dff-1f0d-434c-8776-f0a2bc3d0462
+		summarizeBy: sum
+		sourceColumn: valor_unitario
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_total_item
+		dataType: int64
+		formatString: 0
+		lineageTag: 66cd4dfa-b080-4421-aba8-5b77bcc2fdf5
+		summarizeBy: sum
+		sourceColumn: valor_total_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column setor_execucao
+		dataType: string
+		lineageTag: b79eec11-16a0-4550-905d-ee095b7e87e6
+		summarizeBy: none
+		sourceColumn: setor_execucao
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_pacote
+		dataType: string
+		lineageTag: 0036facd-7029-479f-921f-6e6b4d929f65
+		summarizeBy: none
+		sourceColumn: flag_pacote
+
+		annotation SummarizationSetBy = Automatic
+
+	column glosa_item_flag
+		dataType: string
+		lineageTag: ba706069-5078-4261-b67a-3610e7ab4d40
+		summarizeBy: none
+		sourceColumn: glosa_item_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column motivo_glosa
+		dataType: string
+		lineageTag: 7e1cb18f-1890-4adc-a415-c2e8c5a75e47
+		summarizeBy: none
+		sourceColumn: motivo_glosa
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_glosado
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a654584-7a63-46f8-9916-1c56083d6e42
+		summarizeBy: sum
+		sourceColumn: valor_glosado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Base 2 – Itens da Internação' = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\fcarneiro\Desktop\case_prático_-_cientista_de_dados_jr\Case Prático - Cientista de Dados JR\Base 2 – Itens da Internação.csv"),[Delimiter=",", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"item_id", type text}, {"senha_internacao", type text}, {"data_item", type datetime}, {"tipo_item", type text}, {"subtipo_item", type text}, {"codigo_item", type text}, {"descricao_item", type text}, {"quantidade_solicitada", Int64.Type}, {"quantidade_autorizada", Int64.Type}, {"unidade_medida", type text}, {"valor_unitario", Int64.Type}, {"valor_total_item", Int64.Type}, {"setor_execucao", type text}, {"flag_pacote", type text}, {"glosa_item_flag", type text}, {"motivo_glosa", type text}, {"valor_glosado", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

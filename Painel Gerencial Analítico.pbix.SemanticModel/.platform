@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Painel Gerencial Analítico.pbix"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2849af68-ad5a-456e-ae48-50ecc182a3d5"
+  }
+}

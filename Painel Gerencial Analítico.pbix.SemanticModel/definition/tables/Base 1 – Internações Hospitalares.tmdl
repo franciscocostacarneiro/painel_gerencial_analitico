@@ -1,0 +1,337 @@
+table 'Base 1 – Internações Hospitalares'
+	lineageTag: 322fe1c8-2288-4faa-a2b3-02eb1d8141c0
+
+	column senha_internacao
+		dataType: string
+		lineageTag: 60d76d91-b295-478e-b4f1-d681b807a04d
+		summarizeBy: none
+		sourceColumn: senha_internacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column beneficiario_id
+		dataType: string
+		lineageTag: 97f6089e-1dd5-4eeb-92b4-fd5045aec362
+		summarizeBy: none
+		sourceColumn: beneficiario_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_carteirinha
+		dataType: string
+		lineageTag: facede34-06b1-4bad-a05b-1cd961fee74c
+		summarizeBy: none
+		sourceColumn: numero_carteirinha
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_beneficiario
+		dataType: string
+		lineageTag: a9e655b2-aada-4a21-ba73-a6a9ec359a77
+		summarizeBy: none
+		sourceColumn: nome_beneficiario
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_nascimento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 78e70aae-391c-4547-b6a1-e9fd23a23521
+		summarizeBy: none
+		sourceColumn: data_nascimento
+
+		variation Variation
+			isDefault
+			relationship: 0a82d459-be4d-4484-b45f-10bb6ee8d95b
+			defaultHierarchy: LocalDateTable_e267864b-703f-49c5-b2b5-f0e636cc7365.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 49ecc416-5f46-4f7c-9248-d16c7f7b496a
+		summarizeBy: sum
+		sourceColumn: idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo
+		dataType: string
+		lineageTag: 6fa9c2b4-f461-4170-bf02-a137c5f83793
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: b2e37a3e-c87f-42dd-ab4a-39a81443dd8d
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column municipio
+		dataType: string
+		lineageTag: 5905b1e5-473f-431e-a2bb-b2663be1d653
+		summarizeBy: none
+		sourceColumn: municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospital_id
+		dataType: string
+		lineageTag: 6d2ed848-8ff9-4627-bdfb-2f6c00ff3f73
+		summarizeBy: none
+		sourceColumn: hospital_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospital_nome
+		dataType: string
+		lineageTag: e2019193-c60c-466d-911e-3ffcaa363b72
+		summarizeBy: none
+		sourceColumn: hospital_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column perfil_hospital
+		dataType: string
+		lineageTag: 096335bb-aaf9-46b3-bc19-cfe61c81affe
+		summarizeBy: none
+		sourceColumn: perfil_hospital
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_plano
+		dataType: string
+		lineageTag: 09d9752f-2cb7-44ae-9d13-9b554fd465da
+		summarizeBy: none
+		sourceColumn: tipo_plano
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmentacao_plano
+		dataType: string
+		lineageTag: f81b9d4e-f61d-4636-a158-42a8c08cc889
+		summarizeBy: none
+		sourceColumn: segmentacao_plano
+
+		annotation SummarizationSetBy = Automatic
+
+	column acomodacao
+		dataType: string
+		lineageTag: 68d56eee-9df1-4300-bd93-3062af44fe00
+		summarizeBy: none
+		sourceColumn: acomodacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_solicitacao_autorizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: eaa8fd81-9e92-4bfd-9031-e1b973858549
+		summarizeBy: none
+		sourceColumn: data_solicitacao_autorizacao
+
+		variation Variation
+			isDefault
+			relationship: 59758b83-05ce-4140-b5c4-b1d53e5c7478
+			defaultHierarchy: LocalDateTable_f1a07f4c-7464-4dc1-8161-3451393c4342.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_autorizacao_senha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ccca32d9-9407-49a5-af26-2f477cb8e3b2
+		summarizeBy: none
+		sourceColumn: data_autorizacao_senha
+
+		variation Variation
+			isDefault
+			relationship: bc72b456-06da-4724-bba9-5338662cbede
+			defaultHierarchy: LocalDateTable_669a2681-1de2-4b3f-bb3a-60d977250c76.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_admissao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7159700a-8ae5-4d84-8815-fce93dfe4136
+		summarizeBy: none
+		sourceColumn: data_admissao
+
+		variation Variation
+			isDefault
+			relationship: 16abd89e-594d-4f4d-86e0-2a94bc15bab0
+			defaultHierarchy: LocalDateTable_ee82c381-2b69-4a88-b6fe-1064731866e0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_alta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 52251e3a-77a8-40ec-abe4-9629eb1ecc29
+		summarizeBy: none
+		sourceColumn: data_alta
+
+		variation Variation
+			isDefault
+			relationship: c1d2590b-6443-4e81-b996-d406dc9e930c
+			defaultHierarchy: LocalDateTable_9efdffa0-71fd-45ef-a59c-d79777399b1f.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column motivo_alta
+		dataType: string
+		lineageTag: 2fbb0334-a7f1-41a8-afe3-07fb6df4cec7
+		summarizeBy: none
+		sourceColumn: motivo_alta
+
+		annotation SummarizationSetBy = Automatic
+
+	column carater_internacao
+		dataType: string
+		lineageTag: 0b4e47d2-11c5-452f-b01f-08c31b03c327
+		summarizeBy: none
+		sourceColumn: carater_internacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_internacao
+		dataType: string
+		lineageTag: b18bcda7-f375-4a1f-acff-f6586417380b
+		summarizeBy: none
+		sourceColumn: tipo_internacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidade_responsavel
+		dataType: string
+		lineageTag: 457010bf-9afa-4a43-9b3a-9cc305b274d6
+		summarizeBy: none
+		sourceColumn: especialidade_responsavel
+
+		annotation SummarizationSetBy = Automatic
+
+	column cid_principal
+		dataType: string
+		lineageTag: 579b2687-8368-4186-ba07-40044a495de9
+		summarizeBy: none
+		sourceColumn: cid_principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cid_secundario
+		dataType: string
+		lineageTag: 6a56bc03-4b0f-4ed1-8d89-214e24125cc1
+		summarizeBy: none
+		sourceColumn: cid_secundario
+
+		annotation SummarizationSetBy = Automatic
+
+	column complexidade
+		dataType: string
+		lineageTag: 3cf783b8-75b5-4ce0-bcfe-271ec1999620
+		summarizeBy: none
+		sourceColumn: complexidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column uti_flag
+		dataType: string
+		lineageTag: 43cf47b1-e759-41c2-bee7-3302c1d8db8a
+		summarizeBy: none
+		sourceColumn: uti_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column suporte_ventilatorio_flag
+		dataType: string
+		lineageTag: 26279996-1dd6-46e7-9d17-06c3697752fb
+		summarizeBy: none
+		sourceColumn: suporte_ventilatorio_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column hemodialise_flag
+		dataType: string
+		lineageTag: b4818b4a-5bcf-4542-87d8-4f59faf88179
+		summarizeBy: none
+		sourceColumn: hemodialise_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_autorizacao_horas
+		dataType: int64
+		formatString: 0
+		lineageTag: 63b0e037-85ad-4fa2-9b7f-1aeb230daa9f
+		summarizeBy: sum
+		sourceColumn: tempo_autorizacao_horas
+
+		annotation SummarizationSetBy = Automatic
+
+	column auditoria_responsavel
+		dataType: string
+		lineageTag: a5055c00-44fe-4f18-be49-7a56624991e1
+		summarizeBy: none
+		sourceColumn: auditoria_responsavel
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa_auditoria
+		dataType: string
+		lineageTag: c31c9a71-f05a-4411-baf0-9aca7b45b9a4
+		summarizeBy: none
+		sourceColumn: empresa_auditoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_regulacao
+		dataType: string
+		lineageTag: f1002d3e-3771-44ed-9608-2fa0a1c11926
+		summarizeBy: none
+		sourceColumn: status_regulacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column glosa_flag
+		dataType: string
+		lineageTag: b81579be-1f88-4c0c-8ce4-1889dc1f2a02
+		summarizeBy: none
+		sourceColumn: glosa_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_total_conta
+		dataType: int64
+		formatString: 0
+		lineageTag: 4191efd6-376d-447d-90c3-387124d6c931
+		summarizeBy: sum
+		sourceColumn: valor_total_conta
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_pago
+		dataType: int64
+		formatString: 0
+		lineageTag: a44b3660-0a0c-40da-b144-62e041ff0b40
+		summarizeBy: sum
+		sourceColumn: valor_pago
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Base 1 – Internações Hospitalares' = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\fcarneiro\Desktop\case_prático_-_cientista_de_dados_jr\Case Prático - Cientista de Dados JR\Base 1 – Internações Hospitalares.csv"),[Delimiter=",", Columns=36, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"senha_internacao", type text}, {"beneficiario_id", type text}, {"numero_carteirinha", type text}, {"nome_beneficiario", type text}, {"data_nascimento", type datetime}, {"idade", Int64.Type}, {"sexo", type text}, {"uf", type text}, {"municipio", type text}, {"hospital_id", type text}, {"hospital_nome", type text}, {"perfil_hospital", type text}, {"tipo_plano", type text}, {"segmentacao_plano", type text}, {"acomodacao", type text}, {"data_solicitacao_autorizacao", type datetime}, {"data_autorizacao_senha", type datetime}, {"data_admissao", type datetime}, {"data_alta", type datetime}, {"motivo_alta", type text}, {"carater_internacao", type text}, {"tipo_internacao", type text}, {"especialidade_responsavel", type text}, {"cid_principal", type text}, {"cid_secundario", type text}, {"complexidade", type text}, {"uti_flag", type text}, {"suporte_ventilatorio_flag", type text}, {"hemodialise_flag", type text}, {"tempo_autorizacao_horas", Int64.Type}, {"auditoria_responsavel", type text}, {"empresa_auditoria", type text}, {"status_regulacao", type text}, {"glosa_flag", type text}, {"valor_total_conta", Int64.Type}, {"valor_pago", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

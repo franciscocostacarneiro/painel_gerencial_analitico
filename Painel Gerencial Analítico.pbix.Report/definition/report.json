@@ -1,0 +1,123 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU12",
+      "reportVersionAtImport": {
+        "visual": "2.5.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "advanceCardE03760C5AB684758B56AA29F9E6C257B"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU12",
+          "path": "BaseThemes/CY25SU12.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "funil3398594443708335.png",
+          "path": "funil3398594443708335.png",
+          "type": "Image"
+        },
+        {
+          "name": "funil_yellow8589423079343176.png",
+          "path": "funil_yellow8589423079343176.png",
+          "type": "Image"
+        },
+        {
+          "name": "funil_yellow35875872230143435.png",
+          "path": "funil_yellow35875872230143435.png",
+          "type": "Image"
+        },
+        {
+          "name": "ocultar_filtro-032115305050055467.svg",
+          "path": "ocultar_filtro-032115305050055467.svg",
+          "type": "Image"
+        },
+        {
+          "name": "limpar_filtro-029677273141606384.svg",
+          "path": "limpar_filtro-029677273141606384.svg",
+          "type": "Image"
+        },
+        {
+          "name": "filtro_cassi46738863464301983.png",
+          "path": "filtro_cassi46738863464301983.png",
+          "type": "Image"
+        },
+        {
+          "name": "cassi_logo2560093320225666.png",
+          "path": "cassi_logo2560093320225666.png",
+          "type": "Image"
+        },
+        {
+          "name": "Cassi20798123164255644.jpg",
+          "path": "Cassi20798123164255644.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Cassi207110449498763283.jpg",
+          "path": "Cassi207110449498763283.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Cassi24232886069620008.jpg",
+          "path": "Cassi24232886069620008.jpg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

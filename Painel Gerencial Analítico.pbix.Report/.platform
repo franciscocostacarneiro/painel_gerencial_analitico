@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Painel Gerencial Analítico.pbix"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "977740d3-b66e-411d-8340-630f68ca98c9"
+  }
+}
